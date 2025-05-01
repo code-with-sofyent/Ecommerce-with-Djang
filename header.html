@@ -70,14 +70,11 @@
             </button>
             <div x-show="open" @click.away="open = false" x-transition
               class="absolute right-0 mt-2 w-48 bg-white border border-gray-200 rounded-lg shadow-lg z-50">
-              {% if request.user.is_authenticated %}
+
               <a href="/profile" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Profile</a>
               <a href="/settings" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Settings</a>
-              <a href="{% url 'account_logout' %}" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Logout</a>
-              {% else %}
-              <a href="{% url 'account_login' %}" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Login</a>
-              <a href="{% url 'account_signup' %}" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">SignUp</a>
-              {% endif %}
+              <a href="" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Logout</a>
+
             </div>
           </div>
         </div>
